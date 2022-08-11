@@ -14,7 +14,7 @@ int Week(int x)
     {
         Console.Write("Да");
     }
-    else if(x > 7) 
+    else if(x > 7 || x == 0) 
     {
         Console.Write("Неккоректное число!");
     }
