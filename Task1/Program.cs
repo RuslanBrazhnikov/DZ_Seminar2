@@ -9,7 +9,6 @@ int num = int.Parse(Console.ReadLine());
 
 int Sec(int number)
 {
-    string x = "Число не трехзначное!";
     if (number >= 100 && number < 1000)
     {
         number = number / 10;
@@ -17,10 +16,17 @@ int Sec(int number)
     }
     else
     {
-        Console.WriteLine("Число не трехзначное!");
         return -1;
-    }   
+    }
 }
 
 int res = Sec(num);
-Console.Write($"Вторая цифра числа {num} ==> {res}");
+
+if (res != -1)
+{
+    Console.Write($"Вторая цифра числа {num} ==> {res}");
+}
+else
+{
+    Console.Write($"Число не трехзначное!");
+}

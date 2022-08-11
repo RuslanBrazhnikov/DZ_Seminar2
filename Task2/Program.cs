@@ -8,27 +8,27 @@ int num = int.Parse(Console.ReadLine());
 
 int FuncThird(int number)
 {
-
+    
     if (number > 99)
     {
-        while (number > 1000 && number < -1000)
-        {
-            number = number / 10;
-        }
-        return number % 10;
+        while (number > 1000)
+    {
+        number = number / 10;
+    }
+    return number % 10;
     }
     else return -1;
-
+    
 }
 
 
 int res = FuncThird(num);
 
-if (res != -1)
+if(res != -1)
 {
     Console.WriteLine($"Третья цифра заданного числа ==> {res}");
 }
-else
+else 
 {
     Console.WriteLine("Третьей цифры нет!");
 }
